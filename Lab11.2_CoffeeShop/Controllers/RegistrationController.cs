@@ -18,6 +18,8 @@ namespace Lab11._2_CoffeeShop.Controllers
         {
             ViewData["name"] = fname + " " + lname;
             ViewData["email"] = email;
+            ViewData["phone"] = phone;
+            ViewData["password"] = passsword;
             return View();
         }
     }

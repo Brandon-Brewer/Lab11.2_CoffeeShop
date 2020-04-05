@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bzvxf0Bdyi2VMKqAlY0U0gZCX0TTNIq2ezhW9+OYQivVZRSS7is2ekHjvF/bl6fIhKs7nAhQWAKlAmOefKtlLA==",
+  "dgSpecHash": "rF1qzu9uvgZtKoZJnq/0z4WeLK0Tv7S5VBPa0ZWzF/FoysPPMG9xN7dOruvtKaow9vKP6mcwQ+VE8Wu42Tt9ug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BBREWER2\\source\\repos\\Lab11.2_CoffeeShop\\Lab11.2_CoffeeShop\\Lab11.2_CoffeeShop.csproj",
+  "projectFilePath": "C:\\Users\\BBREWER2\\source\\repos\\Lab11.3_CoffeeShop\\Lab11.2_CoffeeShop\\Lab11.3_CoffeeShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BBREWER2\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\BBREWER2\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

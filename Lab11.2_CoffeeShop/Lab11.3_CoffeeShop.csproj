@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Lab11._2_CoffeeShop</RootNamespace>
+    <RootNamespace>Lab11._3_CoffeeShop</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

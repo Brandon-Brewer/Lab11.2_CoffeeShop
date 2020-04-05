@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Lab11._2_CoffeeShop.Models;
+using Lab11._3_CoffeeShop.Models;
 
-namespace Lab11._2_CoffeeShop.Controllers
+namespace Lab11._3_CoffeeShop.Controllers
 {
     public class HomeController : Controller
     {

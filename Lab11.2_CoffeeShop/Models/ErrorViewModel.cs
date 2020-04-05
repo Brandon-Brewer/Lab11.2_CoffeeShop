@@ -1,6 +1,6 @@
 using System;
 
-namespace Lab11._2_CoffeeShop.Models
+namespace Lab11._3_CoffeeShop.Models
 {
     public class ErrorViewModel
     {

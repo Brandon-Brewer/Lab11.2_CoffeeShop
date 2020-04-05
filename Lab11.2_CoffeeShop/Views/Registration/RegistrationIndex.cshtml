@@ -1,20 +1,63 @@
-﻿
+﻿@model Lab11._3_CoffeeShop.Models.RegisterModel
+
 @{
     ViewData["Title"] = "Registration Form";
 }
 
 <h1>Please fill the form to register!</h1>
 
-<form action="/Registration/Registration" method="post"><br />
-    First Name: <br /><input type="text" name="fname" maxlength="20" /><br /><br />
+@{
+    if (ViewData["errorMsg"] != null)
+    {
+    <p><strong>@ViewData["errorMsg"]</strong></p>
+    }
+}
 
-    Last Name: <br /><input type="text" name="lname" maxlength="20" /><br /><br />
 
-    Email: <br /><input type="email" name="email" /><br /><br />
+<form asp-controller="Registration" asp-action="Registration" method="post">
+    <br />
+    <fieldset>
+        First Name: <br /><input type="text" name="fname" maxlength="20" /><br /><br />
 
-    Phone Number: <br /><input type="text" name="phone" maxlength="10" /><br /><br />
+        Last Name: <br /><input type="text" name="lname" maxlength="20" /><br /><br />
 
-    Password: <br /><input type="password" name="password" /><br /><br />
+        Email: <br /><input type="email" name="email" /><br /><br />
 
-    <input type="submit" value="Register" />
+        Phone Number: <br /><input type="text" name="phone" maxlength="10" /><br /><br />
+
+        Password: <br /><input type="password" name="password" /><br /><br />
+
+        Gender:
+        <br />
+        <select id="gender", name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br /><br />
+
+        Over the age of 21?
+        <br />
+        <input type="radio" id="yes" name="age" value="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="age" value="no">
+        <label for="no">No</label>
+        <br /><br />
+
+        What types of coffee do you enjoy?
+        <br />
+        <input type="checkbox" id="espresso" name="espresso" value="Espresso">
+        <label for="espresso"> Espresso</label><br>
+        <input type="checkbox" id="americano" name="americano" value="Americano">
+        <label for="americano"> Americano</label><br>
+        <input type="checkbox" id="macchiato" name="macchiato" value="Macchiato">
+        <label for="macchiato"> Macchiato</label><br>
+        <input type="checkbox" id="cappuccino" name="cappuccino" value="Cappuccino">
+        <label for="cappuccino"> Cappuccino</label><br>
+        <input type="checkbox" id="mocha" name="mocha" value="Mocha">
+        <label for="mocha"> Mocha</label><br>
+        <br /><br />
+
+        <input type="submit" value="Register" />
+    </fieldset>
 </form>

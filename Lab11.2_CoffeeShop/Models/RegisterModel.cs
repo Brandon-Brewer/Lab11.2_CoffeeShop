@@ -12,11 +12,10 @@ namespace Lab11._3_CoffeeShop.Models
         private string firstName; 
         private string lastName; 
         private string email;
-        private string phoneNumber;
         private string password;
         private string gender;
         private bool over21;
-        private List<string> coffeeTypes;
+        private bool coffeeTypes;
 
         
         [DisplayName("First Name")] 
@@ -37,11 +36,15 @@ namespace Lab11._3_CoffeeShop.Models
         public string Email { get => email; set => email = value; }
 
         [DisplayName("Phone Number")]
+        [Phone]
+        [DataType(DataType.PhoneNumber)]
         [Required]
         [MinLength(10)]
-        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
+        public string PhoneNumber { get; set; }
 
         [DisplayName("Password")]
+        [PasswordPropertyText]
+        [DataType(DataType.Password)]
         [Required]
         [MinLength(10)]
         public string Password { get => password; set => password = value; }
@@ -49,7 +52,11 @@ namespace Lab11._3_CoffeeShop.Models
         [Required]
         public string Gender { get => gender; set => gender = value; }
 
+        [DisplayName("Over the age of 21?")]
         [Required]
         public bool Over21 { get => over21; set => over21 = value; }
+
+        [DisplayName("What types of coffee do you enjoy?")]
+        public bool CoffeeTypes { get => coffeeTypes; set => coffeeTypes = value; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Lab11._3_CoffeeShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lab11._3_CoffeeShop.Controllers
@@ -16,23 +17,16 @@ namespace Lab11._3_CoffeeShop.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Registration(string fname, string lname, string email, string phone, string passsword, string gender, bool over21, List<string> coffeeTypes)
+        public IActionResult Registration(RegisterModel register)
         {
             if (ModelState.IsValid)
             {
-                ViewData["name"] = fname + " " + lname;
-                ViewData["email"] = email;
-                ViewData["phone"] = phone;
-                ViewData["password"] = passsword;
-                ViewData["gender"] = gender;
-                ViewData["over21"] = over21;
-                ViewData["coffeeTypes"] = coffeeTypes;
-                return View();
+                return View(register);
             }
             else
             {
                 ViewData["errorMsg"] = "Your form had errors. Please correct and re-submit.";
-                return View("RegistrationIndex");
+                return View("RegistrationIndex", register);
             }
         }
     }

@@ -17,47 +17,42 @@
 <form asp-controller="Registration" asp-action="Registration" method="post">
     <br />
     <fieldset>
-        First Name: <br /><input type="text" name="fname" maxlength="20" /><br /><br />
+        @Html.LabelFor(m => m.FirstName): <br />@Html.EditorFor(m => m.FirstName)<br /><br />
+        @Html.LabelFor(m => m.LastName): <br />@Html.EditorFor(m => m.LastName)<br /><br />
+        @Html.LabelFor(m => m.Email): <br /><input asp-for="Email" /><br /><br />
+        @Html.LabelFor(m => m.PhoneNumber): <br />@Html.EditorFor(m => m.PhoneNumber)<br /><br />
+        @Html.LabelFor(m => m.Password): <br /><input asp-for="Password" /><br /><br />
 
-        Last Name: <br /><input type="text" name="lname" maxlength="20" /><br /><br />
+        @Html.LabelFor(m => m.Gender):<br />
+        <select asp-for="Gender">
+            @{
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            }
+        </select><br /><br />
 
-        Email: <br /><input type="email" name="email" /><br /><br />
-
-        Phone Number: <br /><input type="text" name="phone" maxlength="10" /><br /><br />
-
-        Password: <br /><input type="password" name="password" /><br /><br />
-
-        Gender:
-        <br />
-        <select id="gender", name="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-        </select>
+        @Html.LabelFor(m => m.Over21):<br />
+        <input type="radio" value="true" asp-for="Over21" />
+            @{<label for="true">Yes</label>}
+        <input type="radio" value="false" asp-for="Over21" />
+            @{<label for="false">No</label>}
         <br /><br />
 
-        Over the age of 21?
-        <br />
-        <input type="radio" id="yes" name="age" value="yes">
-        <label for="yes">Yes</label>
-        <input type="radio" id="no" name="age" value="no">
-        <label for="no">No</label>
-        <br /><br />
-
-        What types of coffee do you enjoy?
-        <br />
-        <input type="checkbox" id="espresso" name="espresso" value="Espresso">
+        @Html.LabelFor(m => m.CoffeeTypes):<br />
+        <input type="checkbox" name="coffee" id="espresso" value="espresso" asp-for="CoffeeTypes">
         <label for="espresso"> Espresso</label><br>
-        <input type="checkbox" id="americano" name="americano" value="Americano">
+        <input type="checkbox" name="coffee" id="americano" value="americano" asp-for="CoffeeTypes">
         <label for="americano"> Americano</label><br>
-        <input type="checkbox" id="macchiato" name="macchiato" value="Macchiato">
+        <input type="checkbox" name="coffee" id="macchiato" value="macchiato" asp-for="CoffeeTypes">
         <label for="macchiato"> Macchiato</label><br>
-        <input type="checkbox" id="cappuccino" name="cappuccino" value="Cappuccino">
+        <input type="checkbox" name="coffee" id="cappuccino" value="cappuccino" asp-for="CoffeeTypes">
         <label for="cappuccino"> Cappuccino</label><br>
-        <input type="checkbox" id="mocha" name="mocha" value="Mocha">
+        <input type="checkbox" name="coffee" id="mocha" value="mocha" asp-for="CoffeeTypes">
         <label for="mocha"> Mocha</label><br>
         <br /><br />
 
         <input type="submit" value="Register" />
+
     </fieldset>
 </form>
